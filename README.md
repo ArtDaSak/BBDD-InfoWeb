@@ -87,7 +87,7 @@ Está diseñado para ser un recurso accesible tanto para principiantes curiosos 
             <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="Figma" width="15"/>
         </a>
         Figma para diseño de UI:
-           <a href="https://www.figma.com/design/FT9s9G3CT0mr2y8Zb0Ewm3/Dungeons---Designers?m=auto&t=xRjGlG5HiviXjLgz-1" target="_blank" rel="noreferrer">Dungeons & Designers</a>.
+           <a href="https://www.figma.com/design/VzXdMMMNSJY0UURkhLZtcN/BBDD-InfoWeb" target="_blank" rel="noreferrer">BBDD-InfoWeb</a>.
     </li>
 </ul>
 
