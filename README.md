@@ -93,6 +93,7 @@ Está diseñado para ser un recurso accesible tanto para principiantes curiosos 
 
 ---
 
+
 ## 📂 Estructura del Proyecto:
 
 ```bash
@@ -104,29 +105,32 @@ Está diseñado para ser un recurso accesible tanto para principiantes curiosos 
 │ │ └── 📁 logos/                 # Logos del proyecto.
 ├── 📁 css/                       # Archivos de CSS.
 │ ├── 📁 stylesheets/             # Hojas de estilo para las subpáginas.
+│ │ ├── 📝 community.css          # Estilo para la página del foro de la comunidad.
+│ │ ├── 📝 references.css         # Estilo para la página de las referencias.
 │ │ ├── 📝 topic1.css             # Estilo para la página del tema 1.
 │ │ ├── 📝 topic2.css             # Estilo para la página del tema 2.
 │ │ ├── 📝 topic3.css             # Estilo para la página del tema 3.
-│ │ ├── 📝 topic4.css             # Estilo para la página del tema 4.
-│ │ └── 📝 community.css          # Estilo para la página del foro de la comunidad.
+│ │ └── 📝 topic4.css             # Estilo para la página del tema 4.
 │ ├── 📝 style.css                # Estilo de la página principal.
 │ └── 📝 variables.css            # Variables para las hojas de estilo.
 ├── 📁 data/                      # Archivos JSON.
 ├── 📁 js/                        # Archivos de JS.
 │ ├── 📁 scripts/                 # Scripts para las subpáginas.
+│ │ ├── 📝 community.js           # Script para la página del foro de la comunidad.
+│ │ ├── 📝 references.js          # Script para la página de las referencias.
 │ │ ├── 📝 topic1.js              # Script para la página del tema 1.
 │ │ ├── 📝 topic2.js              # Script para la página del tema 2.
 │ │ ├── 📝 topic3.js              # Script para la página del tema 3.
-│ │ ├── 📝 topic4.js              # Script para la página del tema 4.
-│ │ └── 📝 community.js           # Script para la página del foro de la comunidad.
+│ │ └── 📝 topic4.js              # Script para la página del tema 4.
 │ ├── 📝 main.js                  # Script de la página principal.
 │ └── 📝 util.js                  # Utilidades generales.
 ├── 📁 views/                     # Archivos HTML para las subpáginas.
+│ ├── 📝 community.html           # Página del foro de la comunidad.
+│ ├── 📝 references.css           # Página de las referencias.
 │ ├── 📝 topic1.html              # Página del tema 1.
 │ ├── 📝 topic2.html              # Página del tema 2.
 │ ├── 📝 topic3.html              # Página del tema 3.
-│ ├── 📝 topic4.html              # Página del tema 4.
-│ └── 📝 community.html           # Página del foro de la comunidad.
+│ └── 📝 topic4.html              # Página del tema 4.
 ├── 📝 index.html                 # Página principal del sitio (Landing Page).
 ├── 📝 LICENSE.md                 # Licencia del proyecto.
 └── 📝 README.md                  # Documentación del proyecto.
