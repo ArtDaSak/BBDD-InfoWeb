@@ -6,16 +6,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Tema 3 | BBDD-InfoWeb</title>
-    <link rel="icon" href="../assets/icons/monoIcon.svg" type="image/svg"/>
+    <title>Web | BBDD-InfoWeb</title>
+    <link rel="icon" href="../assets/icons/colorIcon.svg" type="image/svg"/>
 
     <link rel="stylesheet" href="../css/stylesheets/topic3.css"/>
     <script src="../js/util.js"></script>
 </head>
 
 <body>
+    <header class="header">
+        <a href="../index.html"><img src="../assets/img/logos/colorLogo.svg" alt="El isologo principal de La InfoWeb de Bases de Datos, compuesto por un ícono de base de datos, las letras BBDD en color blanco con estilo futurista y la palabra InfoWeb en color turquesa y con estilo cursivo."></a>
+        <p>Web</p>
+    </header>
+
+    <div class="div__nav">
+    <nav>
+        <ul>
+            <li><a href="#subtopic-1">Definición</a></li>
+            <li><a href="#subtopic-2">Puntos Clave</a></li>
+            <li><a href="#example">Ejemplos</a></li>
+            <li><a href="#references">Referencias</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <main class="main">
+    <span class="span__anchor-tag" id="subtopic-1"></span>
+    <div class="div__default">
+        <h1>
+            Definición:
+        </h1>
+        <p>
+            <span class="span__center-quote"><strong>World Wide Web</strong></span><br>
+            <span class="span__start-quote">La WWW o la Web es un sistema de documentos e información interconectados mediante hipervínculos, accesibles a través de Internet.
+                Inventada por Tim Berners-Lee en 1989 como un sistema de hipertextos distribuido, la Web permite navegar entre páginas web de forma intuitiva.<br>
+                Cada página web es un documento de hipertexto (normalmente HTML) que puede contener textos, imágenes y enlaces a otros documentos.
+                Un navegador web interpreta estos documentos: envía peticiones HTTP para obtener recursos (documentos HTML, imágenes, scripts) y los muestra al usuario como páginas interactivas.</span>
+        </p>
+    </div>
+
+    <span class="span__anchor-tag"></span>
+    <div class="div__default">
+        <p>
+            <span class="span__start-quote">Técnicamente, la Web usa el protocolo HTTP (o HTTPS) en la capa de aplicación sobre TCP/IP para solicitar recursos.
+                Por ejemplo, al escribir una URL, el navegador realiza una petición HTTP GET al servidor correspondiente.<br>
+                El servidor web (que puede consistir en varios equipos y balanceadores) procesa la solicitud y devuelve el recurso solicitado (o un mensaje de error).
+                Los usuarios navegan haciendo clic en hipervínculos que son traducidos por el navegador en nuevas peticiones HTTP.<br>
+                Gracias a esta estructura cliente-servidor y al uso de URL, la Web se ha expandido rápidamente como plataforma de información.
+                Aunque en la capa de aplicación la Web es independiente, se asienta sobre la infraestructura de Internet (cableado, routers, protocolos IP/TCP) para el transporte físico de los datos.</span>
+        </p>
+    </div>
+
+    <span class="span__anchor-tag" id="subtopic-2"></span>
+    <div class="div__default">
+        <p>
+            <span class="span__start-quote"><strong>• Lenguajes clave:</strong> HTML (estructura de páginas web), CSS (estilos visuales), JavaScript (lógica en el navegador). Las páginas pueden ser estáticas o generadas dinámicamente por aplicaciones del lado del servidor.<br>
+                <br>
+                <strong>• Arquitectura cliente-servidor:</strong> El navegador (cliente) siempre inicia la comunicación enviando peticiones al servidor; el servidor nunca inicia por sí mismo la transferencia de contenido.<br>
+                <br>
+                <strong>• Hipervínculos:</strong> Elementos en las páginas que, al activarse, desencadenan nuevas peticiones HTTP para cargar otros documentos. Esto permite la navegación en la Web.</span>
+        </p>
+    </div>
     
-    <script src="../js/scripts/topic3.js"></script>
+    <span class="span__anchor-tag" id="example"></span>
+    <div class="div__default">
+        <h1>
+            Ejemplos:
+        </h1>
+        <p>
+            <span class="span__start-quote">
+                - Al buscar en Google, tu navegador envía una petición HTTP con la consulta. Google devuelve una página de resultados HTML con enlaces, la cual el navegador procesa y muestra.<br>
+                <br>
+                - Wikipedia: cada entrada es una página web. Hacer clic en un enlace dentro del texto genera una nueva petición HTTP para cargar la página correspondiente.<br>
+                <br>
+                - Comercio electrónico: cuando compras en línea, tu navegador interactúa con diversos servidores (p. ej. catálogo de productos, pagos) a través de múltiples peticiones HTTP y APIs REST en el backend para completar la transacción.<br>
+                <br>
+                - Aplicaciones web modernas: sitios tipo single-page app (SPA) cargan inicialmente una página HTML y luego usan JavaScript para hacer peticiones dinámicas a APIs web, actualizando la vista sin recargar completamente.</span>
+        </p>
+    </div>
+
+    <span class="span__anchor-tag" id="references"></span>
+    <div class="div__default">
+        <h1>
+            Referencias:
+        </h1>
+        <p>
+            <span class="span__start-quote">Tal como explica MDN, una página web es un documento de hipertexto que el navegador traduce en peticiones HTTP para mostrar contenido.
+                Berners-Lee definió la Web como un sistema de hipertextos distribuido para facilitar el acceso global a la información.
+                Además, la arquitectura en capas de la Web implica que HTTP es un protocolo de aplicación que se apoya en los protocolos de red inferiores (TCP/IP).
+                Los elementos interactivos (enlaces) permiten navegar por la Web solicitando nuevas páginas al servidor mediante HTTP.</span>
+        </p>
+        <button class="button__default" aria-label="Lorem" onclick="window.location.href='../views/references.html'">
+            <img src="../assets/icons/buttom.svg" alt="Imagen del botón a la página del tema, compuesto por unos colores turquesa y rosa neon."/>
+            <span>Saber más</span>
+        </button>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br>
+
+    </main>
+
+    <footer class="footer">
+        <p>Créditos y Desarrollo Disponibles en: <a href="https://github.com/ArtDaSak/BBDD-InfoWeb" target="_blank" aria-label="Ir al Repositorio de GitHub del Proyecto.">BBDD-InfoWeb</a>.</p>
+    </footer>
+    <script src="../js/scripts/topic1.js"></script>
 </body>
 
 </html>
