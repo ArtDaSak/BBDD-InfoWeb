@@ -7,8 +7,9 @@
 }
 
 body {
+  background: url(../../assets/img/backgrounds/futuristicCity.png) no-repeat center top / cover fixed;
   font-family: "quantico-regular", sans-serif;
-  background: var(--oxford-blue);
+  background-color: var(--oxford-blue);
   margin: 0;
   padding: 0;
   color: var(--lavander-web);
@@ -17,7 +18,7 @@ body {
 header h1 {
   text-align: center;
   padding: 20px;
-  background: var(--robin-egg-blue-tranparent-90);
+  background: var(--robin-egg-blue-transparent-90);
   color: var(--oxford-blue);
   font-family: "genos-variable", sans-serif;
 }
@@ -30,17 +31,17 @@ header h1 {
 }
 
 .protocol-card {
-  background: var(--lavander-web);
-  color: var(--oxford-blue);
+  background: var(--oxford-blue-transparent-90);
+  color: var(--lavander-web);
   border-radius: 10px;
   padding: 32px;
-  box-shadow: 0px 0px 8px var(--robin-egg-blue-tranparent-90);
+  box-shadow: 0px 0px 8px var(--robin-egg-blue-transparent-90);
 }
 
 .subtoggle {
   margin-top: 20px;
   font-size: 1.1rem;
-  color: var(--yale-blue);
+  color: var(--steel-pink);
   cursor: pointer;
   border-bottom: 1px dashed var(--yale-blue);
   display: inline-block;
@@ -118,7 +119,7 @@ header h1 {
 
 
 .arrow span {
-  background: white;
+  background: var(--robin-egg-blue);
   padding: 2px 8px;
   font-size: 0.9rem;
   z-index: 1;
@@ -147,7 +148,7 @@ header h1 {
   bottom: 0%; /* aparece encima del icono */
   left: 65%;
   width: 220px;
-  background: var(--yale-blue-tranparent-75);
+  background: var(--yale-blue-transparent-75);
   border-left: 4px solid var(--robin-egg-blue);
   color: var(--lavander-web);
   padding: 10px 15px;
@@ -214,7 +215,7 @@ header h1 {
 .tcpip-layer {
   width: 80%;
   max-width: 400px;
-  background-color: var(--yale-blue-tranparent-75);
+  background-color: var(--yale-blue-transparent-75);
   color: var(--lavander-web);
   padding: 15px 20px;
   text-align: center;
@@ -228,13 +229,13 @@ header h1 {
 }
 
 .tcpip-layer:hover {
-  background-color: var(--robin-egg-blue-tranparent-90);
+  background-color: var(--robin-egg-blue-transparent-90);
   box-shadow: 0 4px 12px rgba(0,0,0,0.4);
   transform: scale(1.02);
 }
 
 .layer-info {
-  background-color: var(--oxford-blue-tranparent-90);
+  background-color: var(--oxford-blue-transparent-90);
   padding: 12px 16px;
   font-size: 0.95rem;
   border-left: 4px solid var(--robin-egg-blue);
