@@ -146,9 +146,6 @@ Este proyecto cuenta con una [Licencia MIT](./LICENSE.md).
 
 - [ArtDaSak](https://github.com/ArtDaSak).
 - [Daniel Alberto Cruz Porras](https://github.com/DanielAlbertoCruzPorras).
-- [Trigos](https://github.com/DanielFelipeTrigosSarmiento).
-- [jeanmarlonandresbarajas](https://github.com/jeanmarlonandresbarajasosorio).
-- [jersson esteban fuentes parra](https://github.com/jerssonfuentes).
 
 ---
 
