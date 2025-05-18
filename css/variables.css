@@ -1,7 +1,7 @@
 :root{
-    --robin-egg-blue-tranparent-90:rgba(10, 189, 198, 0.9);
-    --yale-blue-tranparent-75:     rgba(19, 62, 124, 0.75);
-    --oxford-blue-tranparent-90:   rgba(9, 24, 51, 0.9);
+    --robin-egg-blue-transparent-90:rgba(10, 189, 198, 0.9);
+    --yale-blue-transparent-75:     rgba(19, 62, 124, 0.75);
+    --oxford-blue-transparent-90:   rgba(9, 24, 51, 0.9);
     --robin-egg-blue:#0ABDC6;
     --lavander-web:  #EBEBFF;
     --oxford-blue:   #091833;
