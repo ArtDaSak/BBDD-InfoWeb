@@ -119,6 +119,39 @@
         <p>
         Las capas trabajan de forma conjunta para garantizar una transmisión confiable de extremo a extremo en redes complejas como Internet.
         </p>
+        <div class="flow-toggle">
+          <button id="toggle-flow" onclick="cambiarFlujo()">Flujo actual: Enviar ⬇️</button>
+        </div>
+        <div class="tcpip-stack flujo-descendente">
+          <div class="tcpip-layer" onclick="toggleSection('layer-app')">
+            Capa de Aplicación
+            <div id="layer-app" class="layer-info hidden">
+              Protocolos como HTTP, FTP, DNS. Gestiona la interfaz de usuario y los servicios de red.
+            </div>
+          </div>
+          <div class="tcpip-layer" onclick="toggleSection('layer-trans')">
+            Capa de Transporte
+            <div id="layer-trans" class="layer-info hidden">
+              Garantiza la entrega de los datos mediante TCP (fiable) o UDP (rápido).
+            </div>
+          </div>
+          <div class="tcpip-layer" onclick="toggleSection('layer-inet')">
+            Capa de Internet
+            <div id="layer-inet" class="layer-info hidden">
+              Se encarga del direccionamiento IP y enrutamiento de los paquetes a su destino.
+            </div>
+          </div>
+          <div class="tcpip-layer" onclick="toggleSection('layer-net')">
+            Capa de Acceso a la Red
+            <div id="layer-net" class="layer-info hidden">
+              Controla la transmisión física a través de Ethernet, WiFi, etc.
+            </div>
+          </div>
+        </div>
+        <p class="nota-diagrama">
+          💡 Este diagrama representa el **flujo lógico** de encapsulamiento y desencapsulamiento de datos en una comunicación TCP/IP.
+          Cada capa cumple una función específica en el proceso, y no siempre actúa de forma secuencial visible, pero sí colabora en conjunto.
+        </p>
     </div>
     </section>
   </main>
