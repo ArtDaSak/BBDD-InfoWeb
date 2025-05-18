@@ -142,6 +142,7 @@ body {
 }
 .button__default:hover img {
     content: url(../assets/icons/buttomHover.svg);
+    opacity: 0.77;
 }
 .button__default:hover span {
     text-shadow: 0.2vw 0.27vw 0.5vw var(--robin-egg-blue);
@@ -150,11 +151,13 @@ body {
 
 .span__center-quote {
     display: inline-block;
+    font-size: 1.5vw;
     text-align: center;
     color: var(--lavander-web);
 }
 
 .span__start-quote {
+    margin-top: 2vw;
     display: inline-block;
     text-align: start;
 }
