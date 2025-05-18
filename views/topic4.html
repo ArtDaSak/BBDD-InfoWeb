@@ -1,161 +1,268 @@
 <!DOCTYPE html>
+
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tema 4 | Protocolos HTTP & TCP/IP</title>
-  <link rel="stylesheet" href="../css/stylesheets/topic4.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>HTTP & TCP/IP | BBDD-InfoWeb</title>
+  <link rel="icon" href="../assets/icons/colorIcon.svg" type="image/svg"/>
+
+  <link rel="stylesheet" href="../css/stylesheets/topic4.css"/>
+  <script src="../js/util.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Protocolos HTTP & TCP/IP</h1>
+  <header class="header">
+      <a href="../index.html"><img src="../assets/img/logos/colorLogo.svg" alt="El isologo principal de La InfoWeb de Bases de Datos, compuesto por un ícono de base de datos, las letras BBDD en color blanco con estilo futurista y la palabra InfoWeb en color turquesa y con estilo cursivo."></a>
+      <p>HTTML & TCP/IP</p>
   </header>
 
-  <main class="protocols-grid">
-    <!-- HTTP -->
-    <section class="protocol-card">
-      <h2>HTTP (HyperText Transfer Protocol)</h2>
-      <p>
-        HTTP es un protocolo de aplicación usado para la comunicación entre navegadores web y servidores.
-        Cada vez que visitas un sitio web, tu navegador envía una solicitud HTTP y recibe una respuesta del servidor.
-      </p>
-      <ul>
-        <li><strong>Sin estado:</strong> No guarda información entre solicitudes.</li>
-        <li><strong>Métodos:</strong> GET, POST, PUT, DELETE.</li>
-        <li><strong>Puerto:</strong> 80 (HTTP) y 443 (HTTPS).</li>
-        <li><strong>Funciona sobre TCP/IP.</strong></li>
-      </ul>
+  
+  <header class="header">
+      <a href="../index.html"><img src="../assets/img/logos/colorLogo.svg" alt="El isologo principal de La InfoWeb de Bases de Datos, compuesto por un ícono de base de datos, las letras BBDD en color blanco con estilo futurista y la palabra InfoWeb en color turquesa y con estilo cursivo."></a>
+      <p>API</p>
+  </header>
 
-      <h3 class="subtoggle" onclick="toggleSection('http-details')">+ Funcionamiento</h3>
-      <div id="http-details" class="hidden">
-        <p>
-          El navegador (cliente) envía una solicitud HTTP al servidor.
-          Este responde con una respuesta que contiene los datos solicitados (HTML, JSON, imágenes...).
-        </p>
-        <p>
-          Todo el intercambio ocurre mediante una conexión TCP, lo que garantiza que la información llegue de forma ordenada.
-        </p>
-        <div class="http-diagram">
-            <div class="http-endpoint" onclick="toggleSection('http-methods')">
-                <!-- Icono Cliente -->
-                <div class="icon clickable">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
-                    </svg>
-                </div>
-                <p>Cliente</p>
-                <div id="http-methods" class="extra-info hidden">
-                    <h4>Métodos HTTP</h4>
-                    <ul>
-                    <li><strong>GET:</strong> Solicita datos.</li>
-                    <li><strong>POST:</strong> Envía datos al servidor.</li>
-                    <li><strong>PUT:</strong> Reemplaza un recurso existente.</li>
-                    <li><strong>DELETE:</strong> Elimina un recurso.</li>
-                    <li><strong>PATCH:</strong> Aplica modificaciones parciales a un recurso.</li>
-                    </ul>
-                </div>
-            </div>
+  <div class="div__nav">
+    <nav>
+        <ul>
+          <li><a href="#subtopic-1">Definición</a></li>
+          <li><a href="#subtopic-2">Endpoints y Métodos</a></li>
+          <li><a href="#example">Ejemplos</a></li>
+          <li><a href="#references">Referencias</a></li>
+        </ul>
+    </nav>
+  </div>
 
-            <div class="http-arrows">
-                <div class="arrow request">
-                <span>HTTP Request</span>
-                </div>
-                <div class="arrow response">
-                <span>HTTP Response</span>
-                </div>
-            </div>
-
-            <div class="http-endpoint" onclick="toggleSection('http-status')">
-                <!-- Icono Servidor -->
-                <div class="icon clickable">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 1 0 0 6h13.5a3 3 0 1 0 0-6m-16.5-3a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3m-19.5 0a4.5 4.5 0 0 1 .9-2.7L5.737 5.1a3.375 3.375 0 0 1 2.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 0 1 .9 2.7m0 0a3 3 0 0 1-3 3m0 3h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Zm-3 6h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Z" />
-                    </svg>
-                </div>
-                <p>Servidor</p>
-                <div id="http-status" class="extra-info hidden">
-                <h4>Rangos de Códigos de Estado</h4>
-                <ul>
-                    <li><strong>1xx – Informativos:</strong> El servidor recibió la solicitud y continúa el proceso.</li>
-                    <li><strong>2xx – Éxito:</strong> La solicitud fue recibida, entendida y aceptada correctamente.</li>
-                    <li><strong>3xx – Redirecciones:</strong> Se requiere una acción adicional para completar la solicitud.</li>
-                    <li><strong>4xx – Errores del Cliente:</strong> La solicitud contiene errores (ej: recurso no encontrado, mal formato).</li>
-                    <li><strong>5xx – Errores del Servidor:</strong> El servidor falló al completar una solicitud válida.</li>
-                </ul>
-                </div>
-            </div>
-        </div>
+  <main class="main">
+    <span class="span__anchor-tag" id="subtopic-1"></span>
+    <div class="div__default">
+        <h1>
+            Definición:
+        </h1>
         <p>
-          El cliente envía una solicitud HTTP al servidor, que procesa la solicitud y devuelve una respuesta.
-          Este proceso se repite cada vez que se realiza una nueva solicitud.
-        </p>
-      </div>
-    </section>
-
-    <!-- TCP/IP -->
-    <section class="protocol-card">
-    <h2>TCP/IP (Transmission Control Protocol / Internet Protocol)</h2>
-    <p>
-        TCP/IP es un conjunto de protocolos que define cómo los datos deben ser empaquetados, enviados, transmitidos y recibidos en redes. Es la base del funcionamiento de Internet.
-    </p>
-
-    <h3>Capas del modelo TCP/IP:</h3>
-    <ul>
-        <li><strong>Capa de Aplicación:</strong> Maneja servicios y protocolos como HTTP, FTP, DNS.</li>
-        <li><strong>Capa de Transporte:</strong> Encargada del control de flujo y fiabilidad mediante TCP (fiable) o UDP (rápido pero no fiable).</li>
-        <li><strong>Capa de Internet:</strong> Se encarga del direccionamiento y enrutamiento a través del protocolo IP.</li>
-        <li><strong>Capa de Acceso a la Red:</strong> Administra la transmisión física a través de tecnologías como Ethernet, WiFi, entre otras.</li>
-    </ul>
-
-    <h3 class="subtoggle" onclick="toggleSection('tcpip-details')">+ Funcionamiento</h3>
-    <div id="tcpip-details" class="hidden">
-        <p>
-        TCP divide los datos en paquetes, los numera y los envía. El receptor los reordena y confirma su recepción.
-        Si algún paquete no llega, se reenvía automáticamente.
-        </p>
-        <p>
-        IP se encarga de que los paquetes lleguen al destino correcto, basándose en direcciones IP y rutas definidas.
-        </p>
-        <p>
-        Las capas trabajan de forma conjunta para garantizar una transmisión confiable de extremo a extremo en redes complejas como Internet.
-        </p>
-        <div class="flow-toggle">
-          <button id="toggle-flow" onclick="cambiarFlujo()">Flujo actual: Enviar ⬇️</button>
-        </div>
-        <div class="tcpip-stack flujo-descendente">
-          <div class="tcpip-layer" onclick="toggleSection('layer-app')">
-            Capa de Aplicación
-            <div id="layer-app" class="layer-info hidden">
-              Protocolos como HTTP, FTP, DNS. Gestiona la interfaz de usuario y los servicios de red.
-            </div>
-          </div>
-          <div class="tcpip-layer" onclick="toggleSection('layer-trans')">
-            Capa de Transporte
-            <div id="layer-trans" class="layer-info hidden">
-              Garantiza la entrega de los datos mediante TCP (fiable) o UDP (rápido).
-            </div>
-          </div>
-          <div class="tcpip-layer" onclick="toggleSection('layer-inet')">
-            Capa de Internet
-            <div id="layer-inet" class="layer-info hidden">
-              Se encarga del direccionamiento IP y enrutamiento de los paquetes a su destino.
-            </div>
-          </div>
-          <div class="tcpip-layer" onclick="toggleSection('layer-net')">
-            Capa de Acceso a la Red
-            <div id="layer-net" class="layer-info hidden">
-              Controla la transmisión física a través de Ethernet, WiFi, etc.
-            </div>
-          </div>
-        </div>
-        <p class="nota-diagrama">
-          💡 Este diagrama representa el **flujo lógico** de encapsulamiento y desencapsulamiento de datos en una comunicación TCP/IP.
-          Cada capa cumple una función específica en el proceso, y no siempre actúa de forma secuencial visible, pero sí colabora en conjunto.
+            <span class="span__center-quote">Una API es un conjunto de reglas y definiciones que permite a diferentes programas comunicarse entre sí.</span><br>
+            <span class="span__start-quote">Actúa como interfaz entre aplicaciones, ocultando la complejidad interna de un sistema y exponiendo solo
+              lo necesario. Gracias a las APIs, los desarrolladores pueden reutilizar servicios existentes en lugar de crear
+              todo desde cero, lo que acelera el desarrollo y facilita la interoperabilidad entre sistemas. Por ejemplo, una
+              aplicación puede utilizar la API de Google Maps para mostrar ubicaciones sin tener que implementar mapas
+              desde cero.</span>
         </p>
     </div>
-    </section>
+
+    <span class="span__anchor-tag" id="subtopic-2"></span>
+    <div class="div__default">
+        <p>
+            <span class="span__center-quote"><strong>Endpoints y métodos</strong></span><br>
+            <span class="span__start-quote">Internamente, una API define puntos finales (endpoints) y métodos (verbo HTTP, por ejemplo GET o POST)
+              que el cliente utiliza para solicitar servicios al servidor. La comunicación suele ocurrir sobre HTTP/HTTPS: el
+              cliente envía una petición (por ejemplo un GET JSON) y el servidor responde con datos (como JSON o XML).
+              Existen diversos estilos de API, por ejemplo REST (arquitectura basada en recursos y sin estado), SOAP
+              (protocolo con estándares estrictos y sobrecarga XML) o GraphQL (consulta de datos). Las APIs RESTful se
+              comunican típicamente mediante HTTP y retornan formatos ligeros como JSON, lo que las hace flexibles y
+              fáciles de usar. Algunos conceptos clave son la autenticación (por ejemplo llaves API, OAuth), el
+              versionado de la API (para mantener compatibilidad) y la seguridad (criptografía TLS, validación de
+              entradas).<br>
+              <br>
+              <strong>• Tipos de API comunes:</strong> REST (usa HTTP y JSON, flexible), SOAP (protocolo XML con estándares de
+              seguridad y transacciones integradas), GraphQL (consulta dinámica de datos).<br>
+              <br>
+              <strong>• Elementos de una petición:</strong> URL del endpoint + método HTTP + cabeceras (autenticación, tipo de
+              contenido) + parámetros (query o cuerpo JSON). El servidor devuelve un código de estado (por
+              ejemplo 200 OK, 404 Not Found) y los datos solicitados.<br>
+              <br>
+              <strong>• Ventajas:</strong> Abstracción de lógica compleja, facilidad de integración, escalabilidad (permiten
+              arquitecturas de microservicios), y fomento de la colaboración al exponer servicios reutilizables.</span>
+        </p>
+    </div>
+
+    <span class="span__anchor-tag" id="example"></span>
+    <div class="div__default">
+        <h1>
+            Ejemplos:
+        </h1>
+        <p>
+            <span class="span__start-quote">
+              - Una aplicación móvil del clima llama a la API de OpenWeatherMap para obtener datos meteorológicos actualizados en JSON.<br>
+              <br>
+              - Un sitio de viajes usa la API de Google Maps para calcular rutas y mostrar mapas interactivos.<br>
+              <br>
+              - Dos microservicios dentro de una empresa se comunican mediante una API REST privada: uno maneja usuarios y otro procesa pagos.<br>
+              <br>
+              - Un sitio web muestra publicaciones de Twitter invocando la API de Twitter mediante peticiones GET, integrando contenido externo.</span>
+        </p>
+    </div>
+
+    <span class="span__anchor-tag" id="references"></span>
+    <div class="div__default">
+        <h1>
+            Referencias:
+        </h1>
+        <p>
+            <span class="span__start-quote">Cloudflare Learning Center explica que una API es un «conjunto de reglas que permite a un
+              programa trasmitir datos a otro programa». Red Hat resalta que las APIs REST se construyen sobre HTTP y
+              devuelven datos en formatos sencillos como JSON, mientras que SOAP es un protocolo más rígido con
+              normas integradas para seguridad y transacciones empresariales.</span>
+        </p>
+        <button class="button__default" aria-label="Lorem" onclick="window.location.href='../views/references.html'">
+          <img src="../assets/icons/buttom.svg" alt="Imagen del botón a la página del tema, compuesto por unos colores turquesa y rosa neon."/>
+          <span>Saber más</span>
+      </button>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br>
+
   </main>
 
+    <main class="protocols-grid">
+      <!-- HTTP -->
+      <section class="protocol-card">
+        <h2>HTTP (HyperText Transfer Protocol)</h2>
+        <p>
+          HTTP es un protocolo de aplicación usado para la comunicación entre navegadores web y servidores.
+          Cada vez que visitas un sitio web, tu navegador envía una solicitud HTTP y recibe una respuesta del servidor.
+        </p>
+        <ul>
+          <li><strong>Sin estado:</strong> No guarda información entre solicitudes.</li>
+          <li><strong>Métodos:</strong> GET, POST, PUT, DELETE.</li>
+          <li><strong>Puerto:</strong> 80 (HTTP) y 443 (HTTPS).</li>
+          <li><strong>Funciona sobre TCP/IP.</strong></li>
+        </ul>
+
+        <h3 class="subtoggle" onclick="toggleSection('http-details')">+ Funcionamiento</h3>
+        <div id="http-details" class="hidden">
+          <p>
+            El navegador (cliente) envía una solicitud HTTP al servidor.
+            Este responde con una respuesta que contiene los datos solicitados (HTML, JSON, imágenes...).
+          </p>
+          <p>
+            Todo el intercambio ocurre mediante una conexión TCP, lo que garantiza que la información llegue de forma ordenada.
+          </p>
+          <div class="http-diagram">
+              <div class="http-endpoint" onclick="toggleSection('http-methods')">
+                  <!-- Icono Cliente -->
+                  <div class="icon clickable">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25" />
+                      </svg>
+                  </div>
+                  <p>Cliente</p>
+                  <div id="http-methods" class="extra-info hidden">
+                      <h4>Métodos HTTP</h4>
+                      <ul>
+                      <li><strong>GET:</strong> Solicita datos.</li>
+                      <li><strong>POST:</strong> Envía datos al servidor.</li>
+                      <li><strong>PUT:</strong> Reemplaza un recurso existente.</li>
+                      <li><strong>DELETE:</strong> Elimina un recurso.</li>
+                      <li><strong>PATCH:</strong> Aplica modificaciones parciales a un recurso.</li>
+                      </ul>
+                  </div>
+              </div>
+
+              <div class="http-arrows">
+                  <div class="arrow request">
+                  <span>HTTP Request</span>
+                  </div>
+                  <div class="arrow response">
+                  <span>HTTP Response</span>
+                  </div>
+              </div>
+
+              <div class="http-endpoint" onclick="toggleSection('http-status')">
+                  <!-- Icono Servidor -->
+                  <div class="icon clickable">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 14.25h13.5m-13.5 0a3 3 0 0 1-3-3m3 3a3 3 0 1 0 0 6h13.5a3 3 0 1 0 0-6m-16.5-3a3 3 0 0 1 3-3h13.5a3 3 0 0 1 3 3m-19.5 0a4.5 4.5 0 0 1 .9-2.7L5.737 5.1a3.375 3.375 0 0 1 2.7-1.35h7.126c1.062 0 2.062.5 2.7 1.35l2.587 3.45a4.5 4.5 0 0 1 .9 2.7m0 0a3 3 0 0 1-3 3m0 3h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Zm-3 6h.008v.008h-.008v-.008Zm0-6h.008v.008h-.008v-.008Z" />
+                      </svg>
+                  </div>
+                  <p>Servidor</p>
+                  <div id="http-status" class="extra-info hidden">
+                  <h4>Rangos de Códigos de Estado</h4>
+                  <ul>
+                      <li><strong>1xx – Informativos:</strong> El servidor recibió la solicitud y continúa el proceso.</li>
+                      <li><strong>2xx – Éxito:</strong> La solicitud fue recibida, entendida y aceptada correctamente.</li>
+                      <li><strong>3xx – Redirecciones:</strong> Se requiere una acción adicional para completar la solicitud.</li>
+                      <li><strong>4xx – Errores del Cliente:</strong> La solicitud contiene errores (ej: recurso no encontrado, mal formato).</li>
+                      <li><strong>5xx – Errores del Servidor:</strong> El servidor falló al completar una solicitud válida.</li>
+                  </ul>
+                  </div>
+              </div>
+          </div>
+          <p>
+            El cliente envía una solicitud HTTP al servidor, que procesa la solicitud y devuelve una respuesta.
+            Este proceso se repite cada vez que se realiza una nueva solicitud.
+          </p>
+        </div>
+      </section>
+
+      <!-- TCP/IP -->
+      <section class="protocol-card">
+      <h2>TCP/IP (Transmission Control Protocol / Internet Protocol)</h2>
+      <p>
+          TCP/IP es un conjunto de protocolos que define cómo los datos deben ser empaquetados, enviados, transmitidos y recibidos en redes. Es la base del funcionamiento de Internet.
+      </p>
+
+      <h3>Capas del modelo TCP/IP:</h3>
+      <ul>
+          <li><strong>Capa de Aplicación:</strong> Maneja servicios y protocolos como HTTP, FTP, DNS.</li>
+          <li><strong>Capa de Transporte:</strong> Encargada del control de flujo y fiabilidad mediante TCP (fiable) o UDP (rápido pero no fiable).</li>
+          <li><strong>Capa de Internet:</strong> Se encarga del direccionamiento y enrutamiento a través del protocolo IP.</li>
+          <li><strong>Capa de Acceso a la Red:</strong> Administra la transmisión física a través de tecnologías como Ethernet, WiFi, entre otras.</li>
+      </ul>
+
+      <h3 class="subtoggle" onclick="toggleSection('tcpip-details')">+ Funcionamiento</h3>
+      <div id="tcpip-details" class="hidden">
+          <p>
+          TCP divide los datos en paquetes, los numera y los envía. El receptor los reordena y confirma su recepción.
+          Si algún paquete no llega, se reenvía automáticamente.
+          </p>
+          <p>
+          IP se encarga de que los paquetes lleguen al destino correcto, basándose en direcciones IP y rutas definidas.
+          </p>
+          <p>
+          Las capas trabajan de forma conjunta para garantizar una transmisión confiable de extremo a extremo en redes complejas como Internet.
+          </p>
+          <div class="flow-toggle">
+            <button id="toggle-flow" onclick="cambiarFlujo()">Flujo actual: Enviar ⬇️</button>
+          </div>
+          <div class="tcpip-stack flujo-descendente">
+            <div class="tcpip-layer" onclick="toggleSection('layer-app')">
+              Capa de Aplicación
+              <div id="layer-app" class="layer-info hidden">
+                Protocolos como HTTP, FTP, DNS. Gestiona la interfaz de usuario y los servicios de red.
+              </div>
+            </div>
+            <div class="tcpip-layer" onclick="toggleSection('layer-trans')">
+              Capa de Transporte
+              <div id="layer-trans" class="layer-info hidden">
+                Garantiza la entrega de los datos mediante TCP (fiable) o UDP (rápido).
+              </div>
+            </div>
+            <div class="tcpip-layer" onclick="toggleSection('layer-inet')">
+              Capa de Internet
+              <div id="layer-inet" class="layer-info hidden">
+                Se encarga del direccionamiento IP y enrutamiento de los paquetes a su destino.
+              </div>
+            </div>
+            <div class="tcpip-layer" onclick="toggleSection('layer-net')">
+              Capa de Acceso a la Red
+              <div id="layer-net" class="layer-info hidden">
+                Controla la transmisión física a través de Ethernet, WiFi, etc.
+              </div>
+            </div>
+          </div>
+          <p class="nota-diagrama">
+            💡 Este diagrama representa el **flujo lógico** de encapsulamiento y desencapsulamiento de datos en una comunicación TCP/IP.
+            Cada capa cumple una función específica en el proceso, y no siempre actúa de forma secuencial visible, pero sí colabora en conjunto.
+          </p>
+      </div>
+      </section>
+    </main>
+    
+  <footer class="footer">
+      <p>Créditos y Desarrollo Disponibles en: <a href="https://github.com/ArtDaSak/BBDD-InfoWeb" target="_blank" aria-label="Ir al Repositorio de GitHub del Proyecto.">BBDD-InfoWeb</a>.</p>
+  </footer>
   <script src="../js/scripts/topic4.js"></script>
 </body>
 </html>
