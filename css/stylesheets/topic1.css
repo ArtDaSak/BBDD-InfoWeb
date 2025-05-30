@@ -53,6 +53,7 @@ body {
 .div__nav {
     position: fixed;
     left: 0;
+    width: 17vw;
     height: 110%;
     background: var(--yale-blue-transparent-75);
     box-shadow: 0 0.5vw 1vw var(--oxford-blue-transparent-90);
