@@ -39,6 +39,7 @@ body {
 .div__nav {
   position: fixed;
   left: 0;
+  width: 17vw;
   height: 110%;
   background: var(--yale-blue-transparent-75);
   box-shadow: 0 0.5vw 1vw var(--oxford-blue-transparent-90);
@@ -94,6 +95,7 @@ body {
   text-align: start;
   align-self: flex-start;
 }
+
 .div__default p {
   font-size: 1.32vw;
   padding: 3vw 5vw;
@@ -410,3 +412,20 @@ footer a { color: var(--robin-egg-blue); text-decoration: none; }
   100% { background-position: 0 0; }
 }
 .nota-diagrama { margin-top: 25px; }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: var(--eminence);
+  color: var(--lavander-web);
+  font-family: "quantico-regular";
+  font-size: 0.9vw;
+  text-align: center;
+  padding: 0.2vw;
+  z-index: 10;
+}
+footer a {
+  color: var(--robin-egg-blue);
+  text-decoration: none;
+}

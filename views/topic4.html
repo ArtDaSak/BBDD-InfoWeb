@@ -23,7 +23,7 @@
     <nav>
         <ul>
           <li><a href="#subtopic-1">Definición</a></li>
-          <li><a href="#subtopic-2">Endpoints y Métodos</a></li>
+          <li><a href="#subtopic-2">Práctica</a></li>
           <li><a href="#example">Ejemplos</a></li>
           <li><a href="#references">Referencias</a></li>
         </ul>
@@ -187,13 +187,11 @@
         </h1>
         <p>
             <span class="span__start-quote">
-              - Una aplicación móvil del clima llama a la API de OpenWeatherMap para obtener datos meteorológicos actualizados en JSON.<br>
+              - Un <strong>GET</strong> HTTP con <strong>curl</strong> muestra cómo un cliente solicita un recurso: <strong>curl -I http://www.example.com</strong> devuelve el encabezado de respuesta (p. ej. <strong> HTTP/1.1 200 OK</strong>).<br>
               <br>
-              - Un sitio de viajes usa la API de Google Maps para calcular rutas y mostrar mapas interactivos.<br>
-              <br>
-              - Dos microservicios dentro de una empresa se comunican mediante una API REST privada: uno maneja usuarios y otro procesa pagos.<br>
-              <br>
-              - Un sitio web muestra publicaciones de Twitter invocando la API de Twitter mediante peticiones GET, integrando contenido externo.</span>
+              - Un programa de <strong>ping</strong> envía paquetes ICMP sobre IP (nivel de red) para verificar conectividad, ilustrando el uso de protocolos subyacentes.
+              Al descargar un archivo grande, TCP segmenta el archivo en varios paquetes y confirma la entrega de cada segmento para garantizar integridad.
+              HTTP/2 y HTTP/3: versiones más nuevas de HTTP usan conexiones TCP o QUIC (sobre UDP) multiplexadas, mejorando rendimiento.</span>
     </div>
   </div>
       <span class="span__anchor-tag" id="references"></span>
@@ -202,10 +200,12 @@
               Referencias:
           </h1>
           <p>
-              <span class="span__start-quote">Cloudflare Learning Center explica que una API es un «conjunto de reglas que permite a un
-                programa trasmitir datos a otro programa». Red Hat resalta que las APIs REST se construyen sobre HTTP y
-                devuelven datos en formatos sencillos como JSON, mientras que SOAP es un protocolo más rígido con
-                normas integradas para seguridad y transacciones empresariales.</span>
+              <span class="span__start-quote">La documentación de IBM describe cómo TCP/IP define el formato y el envío de paquetes entre aplicación y red.
+                Se señala que “un cliente realiza una solicitud HTTP a un servidor…
+                El objetivo es acceder a un recurso.
+                La respuesta HTTP… proporciona el recurso solicitado o informa errores”.
+                MDN resalta que HTTP es escalable y extensible gracias a su modelo cliente-servidor y uso de cabeceras.
+                Diversos textos académicos (p. ej., Kurose & Ross, Comer) describen en detalle las capas TCP/IP y el funcionamiento de TCP/IP en redes.</span>
           </p>
           <button class="button__default" aria-label="Lorem" onclick="window.location.href='../views/references.html'">
             <img src="../assets/icons/buttom.svg" alt="Imagen del botón a la página del tema, compuesto por unos colores turquesa y rosa neon."/>
@@ -216,6 +216,9 @@
   <footer class="footer"></footer>
       <p>Créditos y Desarrollo Disponibles en: <a href="https://github.com/ArtDaSak/BBDD-InfoWeb" target="_blank" aria-label="Ir al Repositorio de GitHub del Proyecto.">BBDD-InfoWeb</a>.</p>
   </footer>
+
+  <br><br><br><br><br><br><br>
+
   <script src="../js/scripts/topic4.js"></script>
 </body>
 </html>
