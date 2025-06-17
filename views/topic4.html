@@ -46,7 +46,7 @@
         </p>
     </div>
 
-    <span class="span__anchor-tag" id="subtopic-2"></span>
+    <span class="span__protocols-grid" id="subtopic-2"></span>
     <div class="protocols-grid">
       <!-- HTTP -->
       <section class="protocol-card">
@@ -55,13 +55,17 @@
           HTTP es un protocolo de aplicación usado para la comunicación entre navegadores web y servidores.
           Cada vez que visitas un sitio web, tu navegador envía una solicitud HTTP y recibe una respuesta del servidor.
           </p>
+          <br>
           <ul>
               <li><strong>Sin estado:</strong> No guarda información entre solicitudes.</li>
               <li><strong>Métodos:</strong> GET, POST, PUT, DELETE.</li>
               <li><strong>Puerto:</strong> 80 (HTTP) y 443 (HTTPS).</li>
               <li><strong>Funciona sobre TCP/IP.</strong></li>
           </ul>
-          <h3 class="subtoggle" onclick="toggleSection('http-details')">+ Funcionamiento</h3>
+          <button class="button__subtoggle" aria-label="Lorem" onclick="toggleSection('http-details')">
+            <img src="../assets/icons/buttom.svg" alt="Imagen del botón a la página del tema, compuesto por unos colores turquesa y rosa neon."/>
+            <span>Funcionamiento</span>
+          </button>
           <div id="http-details" class="hidden">
               <p>
                   El navegador (cliente) envía una solicitud HTTP al servidor.<br>
@@ -129,6 +133,7 @@
           <p>
               TCP/IP es un conjunto de protocolos que define cómo los datos deben ser empaquetados, enviados, transmitidos y recibidos en redes. Es la base del funcionamiento de Internet.
           </p>
+          <br>
           <h3>Capas del modelo TCP/IP:</h3>
           <ul>
               <li><strong>Capa de Aplicación:</strong> Maneja servicios y protocolos como HTTP, FTP, DNS.</li>
@@ -136,7 +141,10 @@
               <li><strong>Capa de Internet:</strong> Se encarga del direccionamiento y enrutamiento a través del protocolo IP.</li>
               <li><strong>Capa de Acceso a la Red:</strong> Administra la transmisión física a través de tecnologías como Ethernet, WiFi, entre otras.</li>
           </ul>
-          <h3 class="subtoggle" onclick="toggleSection('tcpip-details')">+ Funcionamiento</h3>
+          <button class="button__subtoggle" aria-label="Lorem" onclick="toggleSection('tcpip-details')">
+            <img src="../assets/icons/buttom.svg" alt="Imagen del botón a la página del tema, compuesto por unos colores turquesa y rosa neon."/>
+            <span>Funcionamiento</span>
+          </button>
           <div id="tcpip-details" class="hidden">
               <p>
               TCP divide los datos en paquetes, los numera y los envía. El receptor los reordena y confirma su recepción.
@@ -219,7 +227,7 @@
       <p>Créditos y Desarrollo Disponibles en: <a href="https://github.com/ArtDaSak/BBDD-InfoWeb" target="_blank" aria-label="Ir al Repositorio de GitHub del Proyecto.">BBDD-InfoWeb</a>.</p>
     </footer>
 
-  <br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br>
 
   <script src="../js/scripts/topic4.js"></script>
 </body>

@@ -78,7 +78,8 @@ body {
   transition: margin 0.2s;
 }
 
-.span__anchor-tag { display: flex; margin-top: -3rem; padding: 3rem; }
+.span__anchor-tag { display: flex; margin-top: -5vw; padding: 4.7vw; }
+.span__protocols-grid { display: flex; margin-top: -3rem; padding: 3rem; }
 
 .div__default {
   display: flex;
@@ -160,25 +161,14 @@ body {
   background-color: var(--eminence);
   color: var(--lavander-web);
   font-family: "quantico-regular";
-  font-size: 0.9rem;
+  font-size: 0.9vw;
   text-align: center;
-  padding: 0.5rem;
+  padding: 0.2vw;
   z-index: 10;
 }
-.footer a { color: var(--robin-egg-blue); text-decoration: none; }
-
-@import url(../css/variables.css);
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: var(--oxford-blue);
-    font-family: "tomorrow-regular", sans-serif;
-    color: var(--lavander-web);
+footer a {
+  color: var(--robin-egg-blue);
+  text-decoration: none;
 }
 
 .protocols-grid {
@@ -194,33 +184,71 @@ body {
     color: var(--lavander-web);
     border-radius: 0.8rem;
     padding: 2rem;
-    box-shadow: 0 0 0.5rem var(--robin-egg-blue-transparent-90);
 }
 
 .protocol-card h2, .protocol-card h3 {
-    font-family: "genos-variable", sans-serif;
+    font-family: "quantico-regular";
+    font-size: 1.7vw;
     color: var(--steel-pink);
+    text-shadow: 0.2vw 0.27vw 0.5vw var(--yale-blue-transparent-75);
+    text-align: start;
+    align-self: flex-start;
 }
 
 .protocol-card p, .protocol-card ul {
     font-family: "tomorrow-regular", sans-serif;
     color: var(--lavander-web);
+    font-size: 1.32vw;
+    color: var(--lavander-web);
+    text-shadow: 0.2vw 0.27vw 0.5vw var(--eminence);
 }
 
-.subtoggle {
-    margin-top: 1.5rem;
-    font-size: 1.1rem;
-    color: var(--steel-pink);
-    cursor: pointer;
-    border-bottom: 1px dashed var(--yale-blue);
-    display: inline-block;
-    font-family: "genos-variable", sans-serif;
-    transition: color 0.3s;
+.protocol-card ul li {
+  margin-inline-start: 2vw;
 }
 
-.subtoggle:hover {
-    color: var(--robin-egg-blue);
-    text-shadow: 0.1vw 0.17vw 0 var(--steel-pink);
+.button__subtoggle {
+  margin: 2.7vw auto;
+  width: 100%;
+  max-width: 12vw;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.button__subtoggle img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+.button__subtoggle span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  color: var(--lavander-web);
+  font-family: "tomorrow-regular";
+  font-size: 1.27vw;
+  text-shadow: 0.2vw 0.27vw 0.5vw var(--raisin-black);
+  text-align: center;
+  z-index: 1;
+  white-space: nowrap;
+}
+.button__subtoggle:hover {
+  filter: drop-shadow(0.1vw 0.17vw 0 var(--robin-egg-blue));
+}
+.button__subtoggle:hover img {
+  content: url(../../assets/icons/buttomHover.svg);
+  opacity: 0.77;
+}
+.button__subtoggle:hover span {
+  text-shadow: 0.2vw 0.27vw 0.5vw var(--robin-egg-blue);
+  filter: brightness(1.2);
 }
 
 .hidden { display: none; }
@@ -316,7 +344,7 @@ body {
     border-radius: 8px;
     font-size: 0.95rem;
     animation: fadeIn 0.3s;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 8px var(--oxford-blue-transparent-90);
     z-index: 10;
     font-family: "tomorrow-regular", sans-serif;
 }
