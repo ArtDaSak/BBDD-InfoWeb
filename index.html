@@ -10,12 +10,100 @@
     <link rel="icon" href="./assets/icons/colorIcon.svg" type="image/svg"/>
 
     <link rel="stylesheet" href="./css/style.css"/>
-    <script src="./js/util.js"></script>
+    <script src="./js/main.js"></script>
 </head>
 
 <body>
-    
-    <script src="./js/main.js"></script>
+    <header class="header">
+        <a href="#home"><img src="./assets/img/logos/colorLogo.svg" alt="El isologo principal de La InfoWeb de Bases de Datos, compuesto por un ícono de base de datos, las letras BBDD en color blanco con estilo futurista y la palabra InfoWeb en color turquesa y con estilo cursivo."></a>
+        <nav>
+            <ul>
+                <li><a href="#topic-1" aria-label="Desplazar hasta la sección del Tema 1.">API</a></li>
+                <li><a href="#topic-2" aria-label="Desplazar hasta la sección del Tema 2.">Internet</a></li>
+                <li><a href="#topic-3" aria-label="Desplazar hasta la sección del Tema 3.">Web</a></li>
+                <li><a href="#topic-4" aria-label="Desplazar hasta la sección del Tema 4.">Http & TCP/IP</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <span class="span__anchor-tag" id="home"></span>
+    <span class="main__logo">
+        <img src="./assets/img/logos/colorLogo.svg" alt="El isologo principal de La InfoWeb de Bases de Datos, compuesto por un ícono de base de datos, las letras BBDD en color blanco con estilo futurista y la palabra InfoWeb en color turquesa y con estilo cursivo."/>
+    </span>
+
+    <span class="span__anchor-tag" id="topic-1"></span>
+    <div class="div__default">
+        <h1 class="h1__default">
+            API
+        </h1>
+        <p>
+            <span class="span__center-quote">¿Cómo puede una app del clima saber el estado del tiempo en tu ciudad en tiempo real?<br>
+                ¿Qué permite que dos programas se entiendan aunque hablen "idiomas" distintos?<br>
+                ¿Por qué tantas apps diferentes pueden usar Google Maps sin crearlo desde cero?</span><br>
+            <span class="span__start-quote">Cada vez que tu app del clima acierta o ves un mapa integrado en otra app… hay una API detrás. Te explicamos qué son y por qué están en todo lo que usas.</span>
+        </p>
+        <button class="button__default" aria-label="Lorem" onclick="window.location.href='./views/topic1.html'">
+            <img src="./assets/icons/buttom.svg" alt="Imagen del botón a la página del tema, compuesto por unos colores turquesa y rosa neon."/>
+            <span>Ver más</span>
+        </button>
+    </div>
+
+    <span class="span__anchor-tag" id="topic-2"></span>
+    <div class="div__default">
+        <h1 class="h1__default">
+            Internet
+        </h1>
+        <p>
+            <span class="span__center-quote">¿Cómo es posible que podamos comunicarnos con personas de todo el mundo en segundos?<br>
+                ¿Qué pasa realmente cuando mandas un mensaje o ves un video por Internet?<br>
+                ¿Por qué Internet sigue funcionando aunque un servidor o una red falle?</span><br>
+            <span class="span__start-quote">¿Alguna vez te preguntaste cómo viaja tu mensaje hasta el otro lado del mundo en segundos? Spoiler: no va en línea recta, pero siempre llega. Descubrí cómo funciona la red que lo hace posible.</span>
+        </p>
+        <button class="button__default" aria-label="Lorem" onclick="window.location.href='./views/topic2.html'">
+            <img src="./assets/icons/buttom.svg" alt="Imagen del botón a la página del tema, compuesto por unos colores turquesa y rosa neon."/>
+            <span>Ver más</span>
+        </button>
+    </div>
+
+    <span class="span__anchor-tag" id="topic-3"></span>
+    <div class="div__default">
+        <h1 class="h1__default">
+            Web
+        </h1>
+        <p>
+            <span class="span__center-quote">¿Es lo mismo Internet que la Web? ¿Por qué muchas personas los confunden?<br>
+                ¿Cómo llega una página web desde un servidor hasta tu pantalla?<br>
+                ¿Qué sucede detrás de escena cuando haces clic en un enlace?</span><br>
+            <span class="span__start-quote">Le das clic a un link y, ¡boom!, aparece una página. Pero… ¿cómo pasa eso realmente? Vamos a desarmar el proceso que hace visible la Web ante tus ojos.</span>
+        </p>
+        <button class="button__default" aria-label="Lorem" onclick="window.location.href='./views/topic3.html'">
+            <img src="./assets/icons/buttom.svg" alt="Imagen del botón a la página del tema, compuesto por unos colores turquesa y rosa neon."/>
+            <span>Ver más</span>
+        </button>
+    </div>
+
+    <span class="span__anchor-tag" id="topic-4"></span>
+    <div class="div__default">
+        <h1 class="h1__default">
+            Protocolos HTTP & TCP/IP
+        </h1>
+        <p>
+            <span class="span__center-quote">¿Qué asegura que los datos lleguen completos y en orden, aunque vayan por caminos distintos?<br>
+                ¿Cómo sabe tu dispositivo exactamente a qué servidor conectarse al visitar una página?<br>
+                ¿Qué significa el «http://» que aparece antes de algunas páginas web?</span><br>
+            <span class="span__start-quote">Aunque no los veas, HTTP y TCP/IP están en cada clic, mensaje o video que cargas. Son el idioma secreto de Internet, y acá te contamos cómo funcionan.</span>
+        </p>
+        <button class="button__default" aria-label="Lorem" onclick="window.location.href='./views/topic4.html'">
+            <img src="./assets/icons/buttom.svg" alt="Imagen del botón a la página del tema, compuesto por unos colores turquesa y rosa neon."/>
+            <span>Ver más</span>
+        </button>
+    </div>
+
+    <br><br><br><br><br>
+
+    <footer class="footer">
+        <p>Créditos y Desarrollo Disponibles en: <a href="https://github.com/ArtDaSak/BBDD-InfoWeb" target="_blank" aria-label="Ir al Repositorio de GitHub del Proyecto.">BBDD-InfoWeb</a>.</p>
+    </footer>
 </body>
 
 </html>
