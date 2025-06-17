@@ -332,46 +332,41 @@ footer a {
     100% { background-position: 20px 0; }
 }
 
-.extra-info {
-    position: absolute;
-    bottom: 0%;
-    left: 65%;
-    width: 220px;
-    background: var(--yale-blue-transparent-75);
-    border-left: 4px solid var(--robin-egg-blue);
-    color: var(--lavander-web);
-    padding: 10px 15px;
-    border-radius: 8px;
-    font-size: 0.95rem;
-    animation: fadeIn 0.3s;
-    box-shadow: 0 2px 8px var(--oxford-blue-transparent-90);
-    z-index: 10;
-    font-family: "tomorrow-regular", sans-serif;
+.http-methods {
+  position: absolute;
+  top: -7vw;
+  left: 60%;
+  min-width: 22vw;
+  max-width: 22vw;
+  background: linear-gradient(135deg, var(--oxford-blue), var(--yale-blue), var(--robin-egg-blue));
+  border-left: 0.28vw solid var(--robin-egg-blue);
+  color: var(--lavander-web);
+  padding: 1.1vw 1.4vw;
+  border-radius: 0.85vw;
+  font-size: 1.32vw;
+  animation: fadeIn 0.3s;
+  box-shadow: 0 0.28vw 1.1vw var(--oxford-blue-transparent-90);
+  z-index: 7;
+  font-family: "tomorrow-regular", sans-serif;
 }
-.extra-info::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -6px;
-    border-width: 6px;
-    border-style: solid;
-    border-color: var(--lavander-web) transparent transparent transparent;
+.http-status {
+  position: absolute;
+  top: -12vw;
+  right: 60%;
+  min-width: 27vw;
+  max-width: 27vw;
+  background: linear-gradient(225deg, var(--oxford-blue), var(--yale-blue), var(--robin-egg-blue));
+  border-right: 0.28vw solid var(--robin-egg-blue);
+  color: var(--lavander-web);
+  padding: 1.1vw 1.4vw;
+  border-radius: 0.85vw;
+  font-size: 1.32vw;
+  animation: fadeIn 0.3s;
+  box-shadow: 0 0.28vw 1.1vw var(--oxford-blue-transparent-90);
+  z-index: 7;
+  font-family: "tomorrow-regular", sans-serif;
 }
 
-@media screen and (max-width: 768px) {
-    .extra-info { width: 180px; }
-}
-
-.extra-info h4 {
-    margin-top: 0;
-    color: var(--robin-egg-blue);
-    font-family: "genos-variable", sans-serif;
-}
-.extra-info ul {
-    padding-left: 18px;
-    margin: 0;
-}
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-5px); }
