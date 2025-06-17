@@ -38,7 +38,11 @@
         </h1>
         <p>
             <span class="span__center-quote">Los protocolos son reglas y formatos compartidos para la comunicación en red.</span><br>
-            <span class="span__start-quote">HTTP (Hypertext Transfer Protocol) es el protocolo de nivel de aplicación más usado en la Web. Define cómo clientes (navegadores) y servidores intercambian mensajes (peticiones y respuestas). Por ejemplo, una petición HTTP típica incluye una línea de solicitud con el método (GET, POST, etc.), la ruta (URL) y la versión HTTP, seguida de cabeceras (tipo de contenido, cookies) y opcionalmente un cuerpo de datos. El servidor devuelve una respuesta con un código de estado (p.ej. 200, 404) y los datos solicitados. HTTP es sin estado (cada petición es independiente) y escalable, permitiendo extenderse con nuevas cabeceras y métodos. Los RFC oficiales (como RFC 2616) definen exactamente estas interacciones. En la práctica, al cargar un sitio web el cliente realiza varias peticiones HTTP (HTML, CSS, JS, imágenes) y el servidor responde con los recursos correspondientes.</span>
+            <span class="span__start-quote">
+              <strong>HTTP (Hypertext Transfer Protocol)</strong> permite a navegadores y servidores intercambiar mensajes usando métodos como GET, POST, PUT y DELETE.<br>
+              <br>
+              <strong>TCP/IP (Transmission Control Protocol / Internet Protocol)</strong> es un conjunto de reglas para la transmisión de datos en red. La capa de aplicación incluye HTTP, y la de transporte asegura la entrega de datos.
+            </span>
         </p>
     </div>
 
@@ -113,6 +117,7 @@
                     </div>
                 </div>
             </div>
+            <br>
             <p>
               El cliente envía una solicitud HTTP al servidor, que procesa la solicitud y devuelve una respuesta.
               Este proceso se repite cada vez que se realiza una nueva solicitud.
@@ -174,8 +179,7 @@
               </div>
             </div>
             <p class="nota-diagrama">
-              💡 Este diagrama representa el **flujo lógico** de encapsulamiento y desencapsulamiento de datos en una comunicación TCP/IP.
-              Cada capa cumple una función específica en el proceso, y no siempre actúa de forma secuencial visible, pero sí colabora en conjunto.
+              💡 Este diagrama muestra el flujo de datos en TCP/IP.
             </p>
         </div>
         </section>
@@ -213,9 +217,9 @@
         </button>
       </div>
     </main>
-  <footer class="footer"></footer>
+    <footer class="footer">
       <p>Créditos y Desarrollo Disponibles en: <a href="https://github.com/ArtDaSak/BBDD-InfoWeb" target="_blank" aria-label="Ir al Repositorio de GitHub del Proyecto.">BBDD-InfoWeb</a>.</p>
-  </footer>
+    </footer>
 
   <br><br><br><br><br><br><br>
 
