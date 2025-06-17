@@ -10,10 +10,10 @@ function cambiarFlujo() {
   if (stack.classList.contains("flujo-descendente")) {
     stack.classList.remove("flujo-descendente");
     stack.classList.add("flujo-ascendente");
-    button.textContent = "Flujo actual: Recibir ⬆️";
+    button.innerHTML = 'Flujo actual: Recibir <img src="../assets/icons/arrowTop.svg">';
   } else {
     stack.classList.remove("flujo-ascendente");
     stack.classList.add("flujo-descendente");
-    button.textContent = "Flujo actual: Enviar ⬇️";
+    button.innerHTML = 'Flujo actual: Enviar <img src="../assets/icons/arrowBottom.svg">';
   }
 }

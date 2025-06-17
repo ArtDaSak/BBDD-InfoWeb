@@ -476,6 +476,11 @@ footer a {
     background-color: var(--steel-pink);
     color: var(--lavander-web);
 }
+.flow-toggle img {
+  width: 1.2vw;
+  vertical-align: middle;
+  margin-bottom: 0.27vw;
+}
 
 .tcpip-stack.flujo-descendente::before { animation: verticalFlowDown 2s linear infinite; }
 .tcpip-stack.flujo-ascendente::before { animation: verticalFlowUp 2s linear infinite; }
@@ -493,4 +498,9 @@ footer a {
     margin-top: 25px;
     font-family: "tomorrow-regular", sans-serif;
     color: var(--lavander-web);
+}
+.nota-diagrama img{
+    width: 1.7vw;
+    vertical-align: middle;
+    margin-bottom: 0.27vw;
 }
