@@ -6,15 +6,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Tema 2 | BBDD-InfoWeb</title>
-    <link rel="icon" href="../assets/icons/monoIcon.svg" type="image/svg"/>
+    <title>Internet | BBDD-InfoWeb</title>
+    <link rel="icon" href="../assets/icons/colorIcon.svg" type="image/svg"/>
 
     <link rel="stylesheet" href="../css/stylesheets/topic2.css"/>
     <script src="../js/util.js"></script>
 </head>
 
 <body>
-    
+    <header class="header">
+        <a href="../index.html"><img src="../assets/img/logos/colorLogo.svg" alt="El isologo principal de La InfoWeb de Bases de Datos, compuesto por un ícono de base de datos, las letras BBDD en color blanco con estilo futurista y la palabra InfoWeb en color turquesa y con estilo cursivo."></a>
+        <p>Internet</p>
+    </header>
+
+    <div class="div__nav">
+    <nav>
+        <ul>
+            <li><a href="#subtopic-1">Definición</a></li>
+            <li><a href="#subtopic-2">Algunos Conceptos<br>Clave</a></li>
+            <li><a href="#example">Ejemplos</a></li>
+            <li><a href="#references">Referencias</a></li>
+        </ul>
+    </nav>
+    </div>
+
+    <main class="main">
+    <span class="span__anchor-tag" id="subtopic-1"></span>
+    <div class="div__default">
+        <h1>
+            Definición:
+        </h1>
+        <p>
+            <span class="span__center-quote">Internet es una red de redes global que conecta computadoras y dispositivos en todo el mundo.</span><br>
+            <span class="span__start-quote">Funciona mediante conmutación de paquetes: los datos se dividen en fragmentos pequeños (paquetes) que viajan por diversas rutas hasta su destino.<br>
+                No existe un centro de control único; en cambio, es una red distribuida de dispositivos (routers, switches, servidores) que intercambian información según protocolos comunes. Gracias a esta arquitectura distribuida, Internet es muy resistente: si falla un nodo o un cable, los paquetes se reencaminan por otra ruta sin interrumpir la red en su conjunto.<br>
+                Para comunicarse, los dispositivos utilizan direcciones IP únicas que identifican cada máquina en la red, y el sistema de nombres DNS traduce direcciones legibles (como www.ejemplo.com) a estas direcciones numéricas.
+        </p>
+    </div>
+
+    <span class="span__anchor-tag"></span>
+    <div class="div__default">
+        <p>
+            <span class="span__start-quote">Los paquetes contienen la información útil dividida en segmentos manejables, junto con metadatos (cabecera) que indican destino, origen y control de errores.
+                Cuando envías información (por ejemplo, un correo electrónico o una foto), esta se fragmenta en paquetes.
+                Cada paquete viaja por la red, pasando por routers y switches que usan algoritmos de enrutamiento para decidir la mejor ruta.
+                Al llegar al destino, los paquetes se reensamblan en el orden correcto para reconstruir el mensaje original.</span>
+        </p>
+    </div>
+
+    <span class="span__anchor-tag" id="subtopic-2"></span>
+    <div class="div__default">
+        <p>
+            <span class="span__center-quote"><strong>Algunos conceptos clave:</strong></span><br>
+            <span class="span__start-quote">
+                <strong>• Modelo de capas:</strong> Internet se basa en capas de red (p. ej., el modelo TCP/IP).
+                Cada capa (física, enlace, red, transporte, aplicación) aporta funciones específicas, de forma que capas superiores (como la de aplicación) utilizan servicios de capas inferiores.<br>
+                <br>
+                <strong>• Protocolos:</strong> Reglas compartidas para el formato de mensajes y procedimientos. Por ejemplo, TCP/IP define cómo se envían datos fiablemente y cómo se enrutan los paquetes. El protocolo IP maneja direcciones y ruteo, mientras que TCP garantiza entrega ordenada y sin errores mediante el establecimiento de una conexión.<br>
+                <br>
+                <strong>• Medios físicos:</strong> La información viaja a través de cables (fibra óptica, cable coaxial) y señales inalámbricas (Wi-Fi, 4G/5G). En todos los casos, los datos son convertidos en pulsos eléctricos o de luz (“bits”) para el transporte físico.<br></span>
+        </p>
+    </div>
+
+    <span class="span__anchor-tag" id="example"></span>
+    <div class="div__default">
+        <h1>
+            Ejemplos:
+        </h1>
+        <p>
+            <span class="span__start-quote">
+                - Al navegar a una página web, tu computadora envía una petición a través de tu proveedor de Internet, pasa por varios routers mundiales y llega al servidor destino. El servidor responde enviando paquetes con el contenido de la página que tu navegador reensambla.<br>
+                <br>
+                - Envío de correo electrónico: tu mensaje es troceado en paquetes por SMTP/TCP/IP, viaja por la red hasta el servidor de destino y allí se vuelve a armar para entregar el correo.<br>
+                <br>
+                - Streaming de video: servicios como YouTube almacenan datos en centros de datos. Cuando ves un video, tu dispositivo recibe paquetes de audio y video desde múltiples servidores (a veces via redes de distribución CDN) para optimizar la transmisión.<br>
+                <br>
+                - Dispositivos IoT: sensores envían datos periódicamente en paquetes pequeños a servidores remotos para monitoreo, utilizando protocolos estandarizados.</span>
+        </p>
+    </div>
+
+    <span class="span__anchor-tag" id="references"></span>
+    <div class="div__default">
+        <h1>
+            Referencias:
+        </h1>
+        <p>
+            <span class="span__start-quote">Se explica que «Internet es una enorme colección de redes que se conectan entre sí», y que opera con conmutación de paquetes.
+                Los dispositivos en la red se comunican siguiendo protocolos estandarizados. Como señalan diversas fuentes, los datos se dividen en paquetes, viajan por routers y se ensamblan al llegar.
+                IBM también describe cómo TCP/IP utiliza capas para mover datos desde la aplicación del remitente hasta el destinatario.</span>
+        </p>
+        <button class="button__default" aria-label="Lorem" onclick="window.location.href='../views/references.html'">
+            <img src="../assets/icons/buttom.svg" alt="Imagen del botón a la página del tema, compuesto por unos colores turquesa y rosa neon."/>
+            <span>Saber más</span>
+        </button>
+    </div>
+
+    <br><br><br><br><br><br><br><br>
+
+    </main>
+
+    <footer class="footer">
+        <p>Créditos y Desarrollo Disponibles en: <a href="https://github.com/ArtDaSak/BBDD-InfoWeb" target="_blank" aria-label="Ir al Repositorio de GitHub del Proyecto.">BBDD-InfoWeb</a>.</p>
+    </footer>
     <script src="../js/scripts/topic2.js"></script>
 </body>
 
