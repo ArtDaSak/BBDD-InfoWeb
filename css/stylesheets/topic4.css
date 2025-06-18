@@ -522,5 +522,7 @@ footer a {
     margin-right: 0;
     padding: 2vw 1vw;
     gap: 3vw;
+    padding-left: 1.7vw;
+    padding-right: 1.7vw;
   }
 }
