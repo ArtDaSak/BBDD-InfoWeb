@@ -62,7 +62,7 @@ Está diseñado para ser un recurso accesible tanto para principiantes curiosos 
         <img src="https://mockapi.io/favicon.ico" alt="MockAPI" width="15"/>
         </a>
         MockAPI para peersistencia de datos:
-        <a href="https://68249f9b0f0188d7e72a19b0.mockapi.io/:forum" target="_blank" rel="noreferrer">BBDD-InfoWeb</a>.
+        <a href="https://68249f9b0f0188d7e72a19b0.mockapi.io/forum" target="_blank" rel="noreferrer">BBDD-InfoWeb</a>.
     </li>
     <li>  
         <a href="https://code.visualstudio.com/" target="_blank" rel="noreferrer">
