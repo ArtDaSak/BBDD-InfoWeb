@@ -1,7 +1,253 @@
-@import url(../variables.css);
+@import url('../variables.css');
 
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background: url(../../assets/img/backgrounds/village.jpg) no-repeat center top / cover fixed;
+    background-color: var(--raisin-black);
+}
+
+.container {
+    display: flex;
+    justify-content:flex-start;
+    margin: 9vw 0 0 5vw;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1vw 3.4vw;
+    z-index: 10;
+    background-color: var(--raisin-black-transparent-50);
+    backdrop-filter: blur(0.27vw);
+    box-shadow: 0 0.5vw 1vw var(--raisin-black-transparent-90);
+    transition: background-color 0.27s ease, backdrop-filter 0.27s ease;
+}
+
+.header img {
+    width: 12vw;
+    height: auto;
+}
+
+.header nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2.7vw;
+}
+
+.header nav ul li {
+    font-family: "genos-variable";
+    font-size: 2.7vw;
+    color: var(--columbia-blue);
+    text-decoration: none;
+}
+
+.header__profile img {
+    max-width: 2.5vw;
+}
+
+.header:hover {
+    filter: brightness(1.2);
+}
+
+.header img:hover {
+    content: url(../../assets/img/logos/textLogo/textLogoTangBlue.png);
+    filter: drop-shadow(0.02vw 0.027vw 0.42vw var(--columbia-blue-transparent-75));
+}
+
+.header__profile img:hover {
+    content: url(../../assets/icons/dragonTangBlue.svg);
+    filter: drop-shadow(0.02vw 0.027vw 0.27vw var(--columbia-blue-transparent-75));
+}
+
+.main-content {
+    display: flex;
+    justify-content: spae-between;
+    gap: 2vw;
+    flex-wrap: nowrap;
+    margin-bottom: 2vw;
+}
+
+.new-post {
+    background-color: var(--raisin-black-transparent-90);
+    padding: 2.5vw;
+    box-shadow: 0 0.4vw 0.8vw var(--raisin-black);
+    min-width: 27vw;
+    width: 100%;
+    max-height: max-content;
+}
+
+.posts {
+    background-color: var(--raisin-black-transparent-90);
+    padding: 2.5vw;
+    box-shadow: 0 0.4vw 0.8vw var(--raisin-black);
+    min-width: 60vw;
+}
+
+h1, h2 {
+    font-family: 'genos-variable';
+    margin-bottom: 2vw;
+    color: var(--tang-blue);
+}
+
+.form-group {
+    margin-bottom: 2vw;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.8vw;
+    font-family: 'genos-variable';
+    font-weight: bold;
+    color: var(--tang-blue);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1.2vw;
+    border: 0.2vw solid var(--raisin-black-transparent-75);
+    font-size: 1vw;
+    font-family: "charm-regular";
+    background-color: var(--columbia-blue);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--tang-blue);
+    box-shadow: 0 0 0.8vw var(--tang-blue-transparent-75);
+}
+
+textarea {
+    min-height: 12vw;
+    resize: vertical;
+}
+
+.button__default {
+    position: relative;
+    width: 100%;
+    max-width: 20vw;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.button__default img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+.button__default span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-52.1%, -70%);
+    color: var(--columbia-blue);
+    font-family: "genos-variable";
+    font-size: 2.1vw;
+    text-shadow: 0.2vw 0.27vw 0.5vw var(--raisin-black);
+    text-align: center;
+    z-index: 1;
+    white-space: nowrap;
+}
+.button__default:hover {
+    filter: drop-shadow(0.02vw 0.027vw 0.7vw var(--tang-blue-transparent-50));
+}
+.button__default:hover img {
+    content: url(../../assets/icons/buttomWhiteAndBlue.svg);
+}
+.button__default:hover span {
+    color: var(--tang-blue);
+    text-shadow: 0.2vw 0.27vw 0.5vw var(--columbia-blue-transparent-75);
+    filter: brightness(1.2);
+}
+
+.post {
+    border-bottom: 0.1vw solid var(--raisin-black-transparent-50);
+    padding: 2vw 0;
+    transition: background-color 0.3s;
+}
+
+.post:hover {
+    background-color: var(--tang-blue-transparent-75);
+}
+
+.post:last-child {
+    border-bottom: none;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2vw;
+}
+
+.post-author {
+    font-family: 'genos-variable';
+    font-size: 1.1vw;
+    font-weight: bold;
+    color: var(--tang-blue);
+}
+
+.post-date {
+    font-size: 0.9vw;
+    color: var(--tang-blue);
+}
+
+.post-content {
+    font-family: "charm-regular";
+    font-size: 1vw;
+    line-height: 1.7;
+    color: var(--columbia-blue);
+}
+
+.loading {
+    text-align: center;
+    padding: 2.5vw;
+    font-family: "charm-regular";
+    font-size: 1.1vw;
+    color: var(--raisin-black-transparent-75);
+}
+
+.error-message {
+    display: none;
+    text-align: center;
+    padding: 1.5vw;
+    margin: 1.5vw 0;
+    background-color: var(--fire-engine-red-transparent-50);
+    font-family: "medievalsharp-regular";
+    color: var(--raisin-black);
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 0.2vw;
+    background-color: var(--raisin-black);
+    color: var(--columbia-blue);
+    font-family: "medievalsharp-regular";
+    font-size: 0.9vw;
+    text-align: center;
+    z-index: 10;
+}
+.footer a {
+    color: var(--tang-blue);
+    text-decoration: none;
 }
