@@ -1,8 +1,8 @@
-# 📡 BBDD-InfoWeb:
+# 📡 InfoWeb:
 
 **🌐 Descubre cómo funciona el Internet, las API y los protocolos que conectan el mundo digital... ¡explicado por y para estudiantes!**
 
-> 🛠️ *Este proyecto se encuentra en desarrollo colaborativo.*
+> 🛠️ *Este proyecto se encuentra en desarrollo; se espera ampliarlo a una Web Completa no exclusiva a BBDD*
 
 **BBDD-InfoWeb** es una aplicación web didáctica construida por estudiantes, con el objetivo de explicar de forma clara, visual y atractiva conceptos esenciales del mundo digital, como _qué es el Internet_, _cómo funcionan las API_, y _cuáles son los protocolos que permiten la comunicación web_, como _HTTP_ y TCP/IP.
 
