@@ -8,8 +8,8 @@
 
 body {
     position: relative;
-    background: url(../../assets/img/backgrounds/village.jpg) no-repeat center top / cover fixed;
-    background-color: var(--raisin-black);
+    background: url(../../assets/img/backgrounds/futuristicCity.png) no-repeat center top / cover fixed;
+    background-color: var(--oxford-blue);
 }
 
 .container {
@@ -22,52 +22,38 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1vw 3.4vw;
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 1vw 3.4vw;
     z-index: 10;
-    background-color: var(--raisin-black-transparent-50);
-    backdrop-filter: blur(0.27vw);
-    box-shadow: 0 0.5vw 1vw var(--raisin-black-transparent-90);
+    background-color: var(--yale-blue-transparent-75);
     transition: background-color 0.27s ease, backdrop-filter 0.27s ease;
+    backdrop-filter: blur(0.27vw);
+    box-shadow: 0 0.5vw 1vw var(--oxford-blue-transparent-90);
 }
-
 .header img {
-    width: 12vw;
+    width: 9vw;
     height: auto;
 }
-
-.header nav ul {
+.header p {
     display: flex;
-    align-items: center;
-    list-style: none;
-    gap: 2.7vw;
-}
-
-.header nav ul li {
-    font-family: "genos-variable";
-    font-size: 2.7vw;
-    color: var(--columbia-blue);
+    margin-inline-end: 5.7vw;
     text-decoration: none;
+    font-family: "genos-variable";
+    font-size: 6vw;
+    color: var(--lavander-web);
 }
 
-.header__profile img {
+.header__profile img{
     max-width: 2.5vw;
 }
-
 .header:hover {
     filter: brightness(1.2);
 }
-
 .header img:hover {
-    content: url(../../assets/img/logos/textLogo/textLogoTangBlue.png);
-    filter: drop-shadow(0.02vw 0.027vw 0.42vw var(--columbia-blue-transparent-75));
-}
-
-.header__profile img:hover {
-    content: url(../../assets/icons/dragonTangBlue.svg);
-    filter: drop-shadow(0.02vw 0.027vw 0.27vw var(--columbia-blue-transparent-75));
+    content: url(../../assets/img/logos/monoLogo.svg);
+    filter: drop-shadow(0.02vw 0.027vw 0.42vw var(--robin-egg-blue-transparent-90));
 }
 
 .main-content {
@@ -79,18 +65,18 @@ body {
 }
 
 .new-post {
-    background-color: var(--raisin-black-transparent-90);
+    background-color: var(--oxford-blue-transparent-90);
     padding: 2.5vw;
-    box-shadow: 0 0.4vw 0.8vw var(--raisin-black);
+    box-shadow: 0 0.4vw 0.8vw var(--oxford-blue);
     min-width: 27vw;
     width: 100%;
     max-height: max-content;
 }
 
 .posts {
-    background-color: var(--raisin-black-transparent-90);
+    background-color: var(--oxford-blue-transparent-90);
     padding: 2.5vw;
-    box-shadow: 0 0.4vw 0.8vw var(--raisin-black);
+    box-shadow: 0 0.4vw 0.8vw var(--oxford-blue);
     min-width: 60vw;
 }
 
@@ -116,7 +102,7 @@ label {
 input, textarea {
     width: 100%;
     padding: 1.2vw;
-    border: 0.2vw solid var(--raisin-black-transparent-75);
+    border: 0.2vw solid var(--oxford-blue-transparent-90);
     font-size: 1vw;
     font-family: "charm-regular";
     background-color: var(--columbia-blue);
@@ -160,7 +146,7 @@ textarea {
     color: var(--columbia-blue);
     font-family: "genos-variable";
     font-size: 2.1vw;
-    text-shadow: 0.2vw 0.27vw 0.5vw var(--raisin-black);
+    text-shadow: 0.2vw 0.27vw 0.5vw var(--oxford-blue);
     text-align: center;
     z-index: 1;
     white-space: nowrap;
@@ -169,7 +155,7 @@ textarea {
     filter: drop-shadow(0.02vw 0.027vw 0.7vw var(--tang-blue-transparent-50));
 }
 .button__default:hover img {
-    content: url(../../assets/icons/buttomWhiteAndBlue.svg);
+    content: url(../../assets/icons/buttomHover.svg);
 }
 .button__default:hover span {
     color: var(--tang-blue);
@@ -178,7 +164,7 @@ textarea {
 }
 
 .post {
-    border-bottom: 0.1vw solid var(--raisin-black-transparent-50);
+    border-bottom: 0.1vw solid var(--oxford-blue-transparent-90);
     padding: 2vw 0;
     transition: background-color 0.3s;
 }
@@ -222,7 +208,7 @@ textarea {
     padding: 2.5vw;
     font-family: "charm-regular";
     font-size: 1.1vw;
-    color: var(--raisin-black-transparent-75);
+    color: var(--oxford-blue-transparent-90);
 }
 
 .error-message {
@@ -232,22 +218,22 @@ textarea {
     margin: 1.5vw 0;
     background-color: var(--fire-engine-red-transparent-50);
     font-family: "medievalsharp-regular";
-    color: var(--raisin-black);
+    color: var(--oxford-blue);
 }
 
 .footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    padding: 0.2vw;
-    background-color: var(--raisin-black);
-    color: var(--columbia-blue);
-    font-family: "medievalsharp-regular";
+    background-color: var(--eminence);
+    color: var(--lavander-web);
+    font-family: "quantico-regular";
     font-size: 0.9vw;
     text-align: center;
+    padding: 0.2vw;
     z-index: 10;
 }
-.footer a {
-    color: var(--tang-blue);
+footer a {
+    color: var(--robin-egg-blue);
     text-decoration: none;
 }
