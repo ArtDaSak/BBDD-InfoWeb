@@ -10,19 +10,6 @@ const loadingElement = document.getElementById('loading');
 const errorElement = document.getElementById('error-message');
 const submitButton = document.getElementById('submit-btn');
 
- window.addEventListener('scroll', function () {
-     const header = document.querySelector('.header');
-     const logo = document.querySelector('.header img');
-
-     if (window.scrollY > 10) {
-         header.style.background = 'linear-gradient(to bottom right, rgba(19, 62, 124), rgba(9, 24, 51))';
-         logo.src = '../assets/img/logos/monoLogo.svg';
-     } else {
-         header.style.background = 'rgba(43, 39, 47, 0.50)';
-         logo.src = '../assets/img/logos/colorLogo.svg';
-     }
- });
-
 function formatDate(dateString) {
     const options = {
         year: 'numeric',
