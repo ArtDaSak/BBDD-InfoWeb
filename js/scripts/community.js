@@ -117,7 +117,6 @@ function sanitizeHTML(str) {
 
 async function createPost(name, message) {
     submitButton.disabled = true;
-    submitButton.textContent = 'Publicando...';
 
     try {
         const response = await fetchWithRetry(API_URL, {
@@ -139,7 +138,6 @@ async function createPost(name, message) {
         console.error('Error al crear post:', error);
     } finally {
         submitButton.disabled = false;
-        submitButton.textContent = 'Publicar';
     }
 }
 

@@ -1,4 +1,4 @@
-@import url('../variables.css');
+@import url(../variables.css);
 
 * {
     margin: 0;
@@ -65,7 +65,9 @@ body {
 }
 
 .new-post {
+    align-items: center;
     background-color: var(--oxford-blue-transparent-90);
+    border-radius: 0.7vw;
     padding: 2.5vw;
     box-shadow: 0 0.4vw 0.8vw var(--oxford-blue);
     min-width: 27vw;
@@ -75,14 +77,15 @@ body {
 
 .posts {
     background-color: var(--oxford-blue-transparent-90);
+    border-radius: 0.7vw;
     padding: 2.5vw;
     box-shadow: 0 0.4vw 0.8vw var(--oxford-blue);
     min-width: 60vw;
 }
 
 h1, h2 {
-    font-family: 'genos-variable';
-    margin-bottom: 2vw;
+    font-family: "genos-variable";
+    margin-bottom: 1vw;
     color: var(--steel-pink);
 }
 
@@ -94,25 +97,28 @@ h1, h2 {
 label {
     display: block;
     margin-bottom: 0.8vw;
-    font-family: 'genos-variable';
+    font-family: "genos-variable";
     font-weight: bold;
-    color: var(--tang-blue);
+    color: var(--lavander-web);
+    font-size: 1.2vw;
 }
 
 input, textarea {
     width: 100%;
     padding: 1.2vw;
-    border: 0.2vw solid var(--oxford-blue-transparent-90);
-    font-size: 1vw;
-    font-family: "charm-regular";
-    background-color: var(--columbia-blue);
+    border: 0.2vw solid var(--yale-blue-transparent-75);
+    font-size: 1.2vw;
+    font-family: "genos-variable";
+    background-color: transparent;
     transition: border-color 0.3s, box-shadow 0.3s;
+    color: var(--lavander-web);
+    border-radius: 0.7vw;
 }
 
 input:focus, textarea:focus {
     outline: none;
-    border-color: var(--tang-blue);
-    box-shadow: 0 0 0.8vw var(--tang-blue-transparent-75);
+    border-color: var(--lavander-web);
+    box-shadow: 0 0 0.8vw var(--lavander-web);
 }
 
 textarea {
@@ -122,6 +128,7 @@ textarea {
 
 .button__default {
     position: relative;
+    margin-inline-start: 0.77vw;
     width: 100%;
     max-width: 20vw;
     background-color: transparent;
@@ -129,11 +136,11 @@ textarea {
     padding: 0;
     cursor: pointer;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
 }
 .button__default img {
-    width: 100%;
+    width: 70%;
     height: auto;
     object-fit: contain;
     display: block;
@@ -142,39 +149,39 @@ textarea {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-52.1%, -70%);
-    color: var(--columbia-blue);
-    font-family: "genos-variable";
-    font-size: 2.1vw;
-    text-shadow: 0.2vw 0.27vw 0.5vw var(--oxford-blue);
+    transform: translate(-50%, -55%);
+    color: var(--lavander-web);
+    font-family: "tomorrow-regular";
+    font-size: 1.5vw;
+    text-shadow: 0.2vw 0.27vw 0.5vw var(--raisin-black);
     text-align: center;
     z-index: 1;
     white-space: nowrap;
 }
 .button__default:hover {
-    filter: drop-shadow(0.02vw 0.027vw 0.7vw var(--tang-blue-transparent-50));
+    filter: drop-shadow(0.1vw 0.17vw 0 var(--robin-egg-blue));
 }
 .button__default:hover img {
     content: url(../../assets/icons/buttomHover.svg);
+    opacity: 0.77;
 }
 .button__default:hover span {
-    color: var(--tang-blue);
-    text-shadow: 0.2vw 0.27vw 0.5vw var(--columbia-blue-transparent-75);
+    text-shadow: 0.2vw 0.27vw 0.5vw var(--robin-egg-blue);
     filter: brightness(1.2);
 }
 
 .post {
     border-bottom: 0.1vw solid var(--oxford-blue-transparent-90);
-    padding: 2vw 0;
+    border-radius: 0.7vw;
+    margin-bottom: 0.7vw;
+    padding: 0.2vw 0.7vw 0.2vw 0.7vw;
     transition: background-color 0.3s;
+    background-color: transparent;
+    color: var(--lavander-web);
 }
 
 .post:hover {
-    background-color: var(--tang-blue-transparent-75);
-}
-
-.post:last-child {
-    border-bottom: none;
+    filter: brightness(7);
 }
 
 .post-header {
@@ -185,30 +192,33 @@ textarea {
 }
 
 .post-author {
-    font-family: 'genos-variable';
+    font-family: "genos-variable";
     font-size: 1.1vw;
     font-weight: bold;
-    color: var(--tang-blue);
+    color: var(--robin-egg-blue);
 }
 
 .post-date {
+    font-family: "quantico-regular";
     font-size: 0.9vw;
-    color: var(--tang-blue);
+    color: var(--lavander-web);
 }
 
 .post-content {
-    font-family: "charm-regular";
+    font-family: "quantico-regular";
     font-size: 1vw;
     line-height: 1.7;
-    color: var(--columbia-blue);
+    color: var(--lavander-web);
 }
 
 .loading {
     text-align: center;
-    padding: 2.5vw;
-    font-family: "charm-regular";
-    font-size: 1.1vw;
-    color: var(--oxford-blue-transparent-90);
+    padding: 1.5vw;
+    font-family: "genos-variable";
+    font-size: 1.2vw;
+    background-color: var(--eminence);
+    border-radius: 0.7vw ;
+    color: var(--lavander-web);
 }
 
 .error-message {
@@ -216,9 +226,10 @@ textarea {
     text-align: center;
     padding: 1.5vw;
     margin: 1.5vw 0;
-    background-color: var(--fire-engine-red-transparent-50);
-    font-family: "medievalsharp-regular";
-    color: var(--oxford-blue);
+    border-radius: 0.7vw;
+    background-color: var(--eminence);
+    font-family: "genos-variable";
+    color: var(--lavander-web);
 }
 
 .footer {
