@@ -1,0 +1,62 @@
+/* animations for topic 4 diagrams */
+@keyframes dashMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 1.3vw 0; }
+}
+@keyframes verticalFlowDown {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 2vw; }
+}
+@keyframes verticalFlowUp {
+  0% { background-position: 0 2vw; }
+  100% { background-position: 0 0; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-0.3vw); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.arrow-animated::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.13vw;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: repeating-linear-gradient(
+      to right,
+      var(--color-robin-egg),
+      var(--color-robin-egg) 0.4vw,
+      transparent 0.4vw,
+      transparent 0.8vw
+  );
+  background-size: 1.3vw 0.13vw;
+  animation: dashMove 1.5s linear infinite;
+}
+.arrow-request::before { animation-direction: normal; }
+.arrow-response::before { animation-direction: reverse; }
+
+.tcpip-stack-animated::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 0.2vw;
+  transform: translateX(-50%);
+  background-image: repeating-linear-gradient(
+      to bottom,
+      var(--color-robin-egg),
+      var(--color-robin-egg) 0.4vw,
+      transparent 0.4vw,
+      transparent 0.8vw
+  );
+  background-size: 100% 1.2vw;
+  z-index: 0;
+}
+.tcpip-stack-down::before { animation: verticalFlowDown 2s linear infinite; }
+.tcpip-stack-up::before { animation: verticalFlowUp 2s linear infinite; }
+
+.animate-fadein {
+  animation: fadeIn 0.3s;
+}

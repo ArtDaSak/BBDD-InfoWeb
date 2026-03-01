@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --color-robin-egg: #0abdc6;
+  --color-robin-egg-t90: rgba(10, 189, 198, 0.9);
+  --color-lavander: #ebebff;
+  --color-oxford: #091833;
+  --color-oxford-t90: rgba(9, 24, 51, 0.9);
+  --color-steel-pink: #ea00d9;
+  --color-yale: #133e7c;
+  --color-yale-t75: rgba(19, 62, 124, 0.75);
+  --color-eminence: #711c91;
+
+  --font-genos: "genos-variable", sans-serif;
+  --font-quantico: "quantico-regular", sans-serif;
+  --font-tomorrow: "tomorrow-regular", sans-serif;
+}
+
+@font-face {
+  font-family: "genos-variable";
+  src: url(/assets/fonts/Genos-Variable.ttf);
+}
+@font-face {
+  font-family: "quantico-regular";
+  src: url(/assets/fonts/Quantico-Regular.ttf);
+}
+@font-face {
+  font-family: "tomorrow-regular";
+  src: url(/assets/fonts/Tomorrow-Regular.ttf);
+}
+
+@layer base {
+  body {
+    background-image: url(/assets/img/backgrounds/futuristicRoad.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: var(--color-oxford);
+    color: var(--color-lavander);
+  }
+}
